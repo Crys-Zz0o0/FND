@@ -1,8 +1,10 @@
 import pickle
 import streamlit as st
+from vncorenlp import VnCoreNLP
 from preprocessing import text_preprocessing
 
 def main():
+    annotator = VnCoreNLP('VnCoreNLP-1.1.1.jar', annotators="wseg,pos,ner,parse", max_heap_size='-Xmx2g')
     st.set_page_config(
         page_title="Fake news detector",
         layout="wide",
