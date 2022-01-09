@@ -6,3 +6,4 @@ pandas
 matplotlib
 vncorenlp
 scikit-learn
+default-jre
