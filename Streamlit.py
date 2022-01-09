@@ -1,5 +1,4 @@
 import pickle
-import sklearn
 import streamlit as st
 from preprocessing import text_preprocessing
 
