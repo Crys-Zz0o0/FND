@@ -6,5 +6,4 @@ pandas
 matplotlib
 vncorenlp
 scikit-learn
-pickle
 warnings
