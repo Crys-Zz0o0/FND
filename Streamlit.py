@@ -23,7 +23,7 @@ def main():
     with open(lrc_path, "rb") as f:
         lrc_model = pickle.load(f)
         
-    with open("Vectorizer.pkl", "rb") as f:
+    with open("Vectorizer_pkl", "rb") as f:
         vectorizer = pickle.load(f)
 
     with st.columns([6, 4]):
