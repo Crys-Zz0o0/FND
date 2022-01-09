@@ -1,4 +1,5 @@
 import pickle
+import sklearn
 import streamlit as st
 from preprocessing import text_preprocessing
 
@@ -47,7 +48,7 @@ def main():
             preprocessed_news = text_preprocessing(news)
             news_vectorized = vectorizer.transform(preprocessed_news)     
             prediction = model.predict(news_vectorized)
-            if pred == 1:
+            if prediction == 1:
                 st.markdown("This is real news")
             else:
                 st.markdown("This is fake news")
