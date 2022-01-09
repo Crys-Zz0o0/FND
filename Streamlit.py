@@ -1,9 +1,6 @@
 import pickle
 import streamlit as st
-from ipynb.fs.full.Project03
-import text_preprocessing
-import read_stopword_file
-
+from preprocessing import text_preprocessing
 
 def main():
     st.set_page_config(
@@ -47,8 +44,7 @@ def main():
                 model = pac_model
             else:
                 model = lcr_model
-            stop_word = read_stopword_file("vietnamese-stopwords.txt")
-            preprocessed_news = text_preprocessing(news, stop_word)
+            preprocessed_news = text_preprocessing(news)
             news_vectorized = vectorizer.transform(preprocessed_news)     
             prediction = model.predict(news_vectorized)
             if pred == 1:
