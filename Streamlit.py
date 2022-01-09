@@ -15,13 +15,13 @@ def main():
             "Logistic Regression": "models/lr.pkl", 
             }
     pac_path = 'PAC_pkl'
-    lcr_path = 'LCR_pkl'
+    lrc_path = 'LRC_pkl'
 
     with open(pac_path, "rb") as f:
         pac_model = pickle.load(f)
 
-    with open(lcr_path, "rb") as f:
-        lcr_model = pickle.load(f)
+    with open(lrc_path, "rb") as f:
+        lrc_model = pickle.load(f)
         
     with open("Vectorizer.pkl", "rb") as f:
         vectorizer = pickle.load(f)
@@ -43,7 +43,7 @@ def main():
             if model_name == 'Passive Aggressive Classifier':
                 model = pac_model
             else:
-                model = lcr_model
+                model = lrc_model
             preprocessed_news = text_preprocessing(news)
             news_vectorized = vectorizer.transform(preprocessed_news)     
             prediction = model.predict(news_vectorized)
