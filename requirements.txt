@@ -1,4 +1,10 @@
 nltk
 requests
 streamlit
+numpy
+pandas
+matplotlib
+vncorenlp
 scikit-learn
+pickle
+warnings
