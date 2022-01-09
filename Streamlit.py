@@ -14,8 +14,8 @@ def main():
             "Passive Aggressive Classifier": "models/pac.pkl",
             "Logistic Regression": "models/lr.pkl", 
             }
-    pac_path = PAC_pkl
-    lcr_path = LCR_pkl
+    pac_path = 'PAC_pkl'
+    lcr_path = 'LCR_pkl'
 
     with open(pac_path, "rb") as f:
         pac_model = pickle.load(f)
